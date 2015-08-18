@@ -1,0 +1,157 @@
+From juvinious at mail.berlios.de  Wed Feb  7 02:50:58 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Wed, 7 Feb 2007 02:50:58 +0100
+Subject: [Openlayer-svn] r167 - trunk/build
+Message-ID: <200702070150.l171ow7O026965@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-02-07 02:50:49 +0100 (Wed, 07 Feb 2007)
+New Revision: 167
+
+Modified:
+   trunk/build/openlayer-config.in
+Log:
+Corrected typo with the openlayer-config script on *nix
+
+
+
+From juvinious at mail.berlios.de  Wed Feb 21 04:34:02 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Wed, 21 Feb 2007 04:34:02 +0100
+Subject: [Openlayer-svn] r168 - trunk/src
+Message-ID: <200702210334.l1L3Y2hq005422@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-02-21 04:33:57 +0100 (Wed, 21 Feb 2007)
+New Revision: 168
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Removed unecessary copying when drawing a character in Glyph class
+
+
+
+From juvinious at mail.berlios.de  Fri Feb 23 22:13:22 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Fri, 23 Feb 2007 22:13:22 +0100
+Subject: [Openlayer-svn] r169 - in trunk: . build demos utils/glyphkeeper
+	utils/glyphkeeper/include utils/glyphkeeper/src
+Message-ID: <200702232113.l1NLDMu9024647@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-02-23 22:11:49 +0100 (Fri, 23 Feb 2007)
+New Revision: 169
+
+Added:
+   trunk/build/FindALLEGRO.cmake
+   trunk/build/FindALLEGROGL.cmake
+   trunk/build/FindFREETYPE.cmake
+   trunk/utils/glyphkeeper/CMakeLists.txt
+   trunk/utils/glyphkeeper/authors.txt
+   trunk/utils/glyphkeeper/changes.txt
+   trunk/utils/glyphkeeper/readme.txt
+   trunk/utils/glyphkeeper/src/glyph_memory.c
+   trunk/utils/glyphkeeper/src/glyph_memory.h
+   trunk/utils/glyphkeeper/src/glyph_workout.c
+Modified:
+   trunk/CMakeLists.txt
+   trunk/build/gk-build.cbd
+   trunk/build/openlayer-config.in
+   trunk/demos/CMakeLists.txt
+   trunk/utils/glyphkeeper/include/glyph.h
+   trunk/utils/glyphkeeper/license.txt
+   trunk/utils/glyphkeeper/src/glyph.c
+   trunk/utils/glyphkeeper/src/glyph_dimensions.c
+   trunk/utils/glyphkeeper/src/glyph_face.c
+   trunk/utils/glyphkeeper/src/glyph_global_vars.c
+   trunk/utils/glyphkeeper/src/glyph_index.c
+   trunk/utils/glyphkeeper/src/glyph_internal.h
+   trunk/utils/glyphkeeper/src/glyph_main.c
+   trunk/utils/glyphkeeper/src/glyph_rend.c
+   trunk/utils/glyphkeeper/src/glyph_structs.h
+   trunk/utils/glyphkeeper/src/glyph_to_allegro.c
+   trunk/utils/glyphkeeper/src/glyph_to_allegro_aa.c
+   trunk/utils/glyphkeeper/src/glyph_to_allegro_mono.c
+   trunk/utils/glyphkeeper/src/glyph_to_opengl.c
+   trunk/utils/glyphkeeper/src/glyph_to_sdl.c
+   trunk/utils/glyphkeeper/src/glyph_to_text.c
+   trunk/utils/glyphkeeper/src/glyph_utils.c
+Log:
+Updated and cleaned up the cmake build scripts, added in some library find modules to help find required libs. Updated glyphkeeper to 0.32 and a cmake script for building it in case the end user wishes to have that instead of the internal renderer, which after choosing in the options is automatically done.
+
+
+
+From juvinious at mail.berlios.de  Fri Feb 23 23:00:31 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Fri, 23 Feb 2007 23:00:31 +0100
+Subject: [Openlayer-svn] r170 - in trunk: . demos
+Message-ID: <200702232200.l1NM0Vwl028701@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-02-23 23:00:06 +0100 (Fri, 23 Feb 2007)
+New Revision: 170
+
+Modified:
+   trunk/CMakeLists.txt
+   trunk/demos/CMakeLists.txt
+Log:
+Fixed windows related cmake build variables
+
+
+
+From juvinious at mail.berlios.de  Sun Feb 25 08:06:24 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Sun, 25 Feb 2007 08:06:24 +0100
+Subject: [Openlayer-svn] r171 - in trunk: include/OpenLayer src
+Message-ID: <200702250706.l1P76OQ4014101@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-02-25 08:06:17 +0100 (Sun, 25 Feb 2007)
+New Revision: 171
+
+Modified:
+   trunk/include/OpenLayer/Bitmap.hpp
+   trunk/src/Bitmap.cpp
+Log:
+Added boolean return so that Bitmap::Save() can report success or not
+
+
+
+From juvinious at mail.berlios.de  Mon Feb 26 11:10:43 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Mon, 26 Feb 2007 11:10:43 +0100
+Subject: [Openlayer-svn] r172 - in trunk: include/OpenLayer src
+Message-ID: <200702261010.l1QAAh2K025532@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-02-26 11:10:33 +0100 (Mon, 26 Feb 2007)
+New Revision: 172
+
+Modified:
+   trunk/include/OpenLayer/Glyph.hpp
+   trunk/include/OpenLayer/TextRenderer.hpp
+   trunk/src/Glyph.cpp
+   trunk/src/TextRenderer.cpp
+Log:
+Added in font height and max height to textrenderer, suggested by tobing
+
+
+
+From juvinious at mail.berlios.de  Wed Feb 28 09:22:59 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Wed, 28 Feb 2007 09:22:59 +0100
+Subject: [Openlayer-svn] r173 - trunk
+Message-ID: <200702280822.l1S8Mxmv009960@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-02-28 09:22:48 +0100 (Wed, 28 Feb 2007)
+New Revision: 173
+
+Modified:
+   trunk/CMakeLists.txt
+Log:
+Fixed some msvc build related items in cmake
+
+
+

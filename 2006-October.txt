@@ -1,0 +1,231 @@
+From fladimir2002 at mail.berlios.de  Sun Oct  1 22:20:31 2006
+From: fladimir2002 at mail.berlios.de (fladimir2002 at mail.berlios.de)
+Date: Sun, 1 Oct 2006 22:20:31 +0200
+Subject: [Openlayer-svn] r126 - trunk/src
+Message-ID: <200610012020.k91KKVOH010550@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-10-01 22:20:30 +0200 (Sun, 01 Oct 2006)
+New Revision: 126
+
+Modified:
+   trunk/src/Settings.cpp
+Log:
+- Disabled point and polygon smoothing permanently because of the issues that they caused with some hardware.
+
+
+
+From fladimir2002 at mail.berlios.de  Thu Oct  5 21:05:46 2006
+From: fladimir2002 at mail.berlios.de (fladimir2002 at mail.berlios.de)
+Date: Thu, 5 Oct 2006 21:05:46 +0200
+Subject: [Openlayer-svn] r127 - in trunk: include/OpenLayer src
+Message-ID: <200610051905.k95J5kho001595@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-10-05 21:05:44 +0200 (Thu, 05 Oct 2006)
+New Revision: 127
+
+Modified:
+   trunk/include/OpenLayer/GlDriver.hpp
+   trunk/src/GlDriver.cpp
+Log:
+- Fixed a memory leak in Bitmap loading
+
+
+
+From juvinious at mail.berlios.de  Wed Oct 18 10:57:00 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Wed, 18 Oct 2006 10:57:00 +0200
+Subject: [Openlayer-svn] r128 - trunk/include/OpenLayer
+Message-ID: <200610180857.k9I8v0ER030414@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-10-18 10:57:00 +0200 (Wed, 18 Oct 2006)
+New Revision: 128
+
+Modified:
+   trunk/include/OpenLayer/Glyph.hpp
+Log:
+Removed a macro from glyph that was deprecated in freetype
+
+
+
+From juvinious at mail.berlios.de  Fri Oct 20 02:33:39 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Fri, 20 Oct 2006 02:33:39 +0200
+Subject: [Openlayer-svn] r129 - trunk
+Message-ID: <200610200033.k9K0Xd6o016588@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-10-20 02:33:34 +0200 (Fri, 20 Oct 2006)
+New Revision: 129
+
+Modified:
+   trunk/default.cbd
+Log:
+Cleaned up the cbuild script, removing unnecessary lines
+
+
+
+From juvinious at mail.berlios.de  Sun Oct 22 22:35:19 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Sun, 22 Oct 2006 22:35:19 +0200
+Subject: [Openlayer-svn] r130 - trunk
+Message-ID: <200610222035.k9MKZJ2E025130@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-10-22 22:35:18 +0200 (Sun, 22 Oct 2006)
+New Revision: 130
+
+Modified:
+   trunk/default.cbd
+Log:
+Added in building of demos along with the library, saving the end user time in compiling each by hand
+
+
+
+From juvinious at mail.berlios.de  Mon Oct 23 04:56:20 2006
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Mon, 23 Oct 2006 04:56:20 +0200
+Subject: [Openlayer-svn] r131 - trunk
+Message-ID: <200610230256.k9N2uKVE024690@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-10-23 04:56:13 +0200 (Mon, 23 Oct 2006)
+New Revision: 131
+
+Modified:
+   trunk/default.cbd
+Log:
+Fixed linking issue with the demos on win32
+
+
+
+From juvinious at mail.berlios.de  Mon Oct 23 20:35:56 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Mon, 23 Oct 2006 20:35:56 +0200
+Subject: [Openlayer-svn] r132 - in trunk: demos/gamedemo demos/shapedemo
+	demos/textdemo include/OpenLayer src
+Message-ID: <200610231835.k9NIZudG008095@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-10-23 20:35:55 +0200 (Mon, 23 Oct 2006)
+New Revision: 132
+
+Modified:
+   trunk/demos/gamedemo/Demo.cpp
+   trunk/demos/shapedemo/Main.cpp
+   trunk/demos/textdemo/Main.cpp
+   trunk/include/OpenLayer/Circle.hpp
+   trunk/include/OpenLayer/Internal.hpp
+   trunk/include/OpenLayer/OlRectangle.hpp
+   trunk/src/Bitmap.cpp
+Log:
+Added in tobings changes to support msvc
+
+
+
+From fladimir2002 at mail.berlios.de  Wed Oct 25 13:57:25 2006
+From: fladimir2002 at mail.berlios.de (fladimir2002 at mail.berlios.de)
+Date: Wed, 25 Oct 2006 13:57:25 +0200
+Subject: [Openlayer-svn] r133 - in trunk: include/OpenLayer src
+Message-ID: <200610251157.k9PBvPVd030128@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-10-25 13:57:23 +0200 (Wed, 25 Oct 2006)
+New Revision: 133
+
+Added:
+   trunk/src/Point.cpp
+Modified:
+   trunk/include/OpenLayer/Point.hpp
+   trunk/src/Canvas.cpp
+   trunk/src/Setup.cpp
+Log:
+- Fixed Canvas::SetClippingRegion and Canvas::GetClippingRegion
+- Added the missing file Point.cpp
+
+
+
+From juvinious at mail.berlios.de  Thu Oct 26 23:33:46 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Thu, 26 Oct 2006 23:33:46 +0200
+Subject: [Openlayer-svn] r134 - in trunk: . build
+Message-ID: <200610262133.k9QLXkrn016036@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-10-26 23:33:45 +0200 (Thu, 26 Oct 2006)
+New Revision: 134
+
+Added:
+   trunk/build/
+   trunk/build/gk-build.cbd
+   trunk/build/header.cbd
+   trunk/build/ldpng-build.cbd
+   trunk/build/ol-config.cbd
+Modified:
+   trunk/default.cbd
+Log:
+Updated cbuild script, cleaning out some cruft. Modularized it and seperated it into sub scripts in build directory
+
+
+
+From juvinious at mail.berlios.de  Tue Oct 31 10:25:08 2006
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Tue, 31 Oct 2006 10:25:08 +0100
+Subject: [Openlayer-svn] r135 - in trunk: . build
+Message-ID: <200610310925.k9V9P89p005804@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-10-31 10:24:59 +0100 (Tue, 31 Oct 2006)
+New Revision: 135
+
+Added:
+   trunk/CMakeLists.txt
+   trunk/build/CMakeMacros.cmake
+   trunk/build/OpenLayer.hpp.cmake
+Log:
+Created and added a cmake script, which will allow for multiplatform and environment compilation targets, instead of just gcc and mingw. For more information on cmake please take a look at www.cmake.org
+
+
+
+From juvinious at mail.berlios.de  Tue Oct 31 11:37:37 2006
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Tue, 31 Oct 2006 11:37:37 +0100
+Subject: [Openlayer-svn] r136 - in trunk: . build
+Message-ID: <200610311037.k9VAbbNc019156@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-10-31 11:37:31 +0100 (Tue, 31 Oct 2006)
+New Revision: 136
+
+Modified:
+   trunk/CMakeLists.txt
+   trunk/Makefile
+   trunk/build/CMakeMacros.cmake
+Log:
+Modifications to cmake script
+
+
+
+From juvinious at mail.berlios.de  Tue Oct 31 23:17:13 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Tue, 31 Oct 2006 23:17:13 +0100
+Subject: [Openlayer-svn] r137 - in trunk: . build
+Message-ID: <200610312217.k9VMHDRv017653@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-10-31 23:17:12 +0100 (Tue, 31 Oct 2006)
+New Revision: 137
+
+Added:
+   trunk/build/ol-config.cmake
+Removed:
+   trunk/Makefile
+Modified:
+   trunk/CMakeLists.txt
+Log:
+Wrote requirements for cmake script on *nix based systems, including generating the script. Now whats left is to add install portions of the script and msvc project file creation.
+
+
+

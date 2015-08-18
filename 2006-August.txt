@@ -1,0 +1,472 @@
+From juvinious at mail.berlios.de  Mon Aug 14 07:45:15 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Mon, 14 Aug 2006 07:45:15 +0200
+Subject: [Openlayer-svn] r94 - in trunk: include/OpenLayer src
+Message-ID: <200608140545.k7E5jFsx010412@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-14 07:44:59 +0200 (Mon, 14 Aug 2006)
+New Revision: 94
+
+Modified:
+   trunk/include/OpenLayer/Glyph.hpp
+   trunk/src/Glyph.cpp
+Log:
+Fixed Glyph to actually render properly now. Tested with the textdemo and looks ok. Some functionality is still missing, mainly italics
+
+
+
+From juvinious at mail.berlios.de  Mon Aug 14 08:56:23 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Mon, 14 Aug 2006 08:56:23 +0200
+Subject: [Openlayer-svn] r95 - in trunk: include/OpenLayer src
+Message-ID: <200608140656.k7E6uNHO031566@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-14 08:56:20 +0200 (Mon, 14 Aug 2006)
+New Revision: 95
+
+Modified:
+   trunk/include/OpenLayer/Glyph.hpp
+   trunk/src/Glyph.cpp
+Log:
+Fixed coloration of font and fixed sizing properly according to width and height
+
+
+
+From juvinious at mail.berlios.de  Mon Aug 14 10:07:19 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Mon, 14 Aug 2006 10:07:19 +0200
+Subject: [Openlayer-svn] r96 - in trunk: . include/OpenLayer src
+Message-ID: <200608140807.k7E87JAd005791@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-14 10:07:18 +0200 (Mon, 14 Aug 2006)
+New Revision: 96
+
+Modified:
+   trunk/default.cbd
+   trunk/include/OpenLayer/Glyph.hpp
+   trunk/src/Glyph.cpp
+Log:
+Updated Glyph,  now everything is mostly intact excluding hinting. Removed developer paramater for cbuild in order to get the internal TTF built. Now to get some user testing.
+
+
+
+From juvinious at mail.berlios.de  Mon Aug 14 13:23:59 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Mon, 14 Aug 2006 13:23:59 +0200
+Subject: [Openlayer-svn] r97 - trunk/src
+Message-ID: <200608141123.k7EBNxJ3009928@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-14 13:23:58 +0200 (Mon, 14 Aug 2006)
+New Revision: 97
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Fixed error checking when loading a font
+
+
+
+From juvinious at mail.berlios.de  Mon Aug 14 13:28:42 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Mon, 14 Aug 2006 13:28:42 +0200
+Subject: [Openlayer-svn] r98 - trunk/src
+Message-ID: <200608141128.k7EBSgul012264@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-14 13:28:40 +0200 (Mon, 14 Aug 2006)
+New Revision: 98
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Forgot to remove debug output
+
+
+
+From juvinious at mail.berlios.de  Tue Aug 15 15:23:16 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Tue, 15 Aug 2006 15:23:16 +0200
+Subject: [Openlayer-svn] r99 - in trunk: . include/OpenLayer src
+Message-ID: <200608151323.k7FDNGRB006899@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-15 15:23:15 +0200 (Tue, 15 Aug 2006)
+New Revision: 99
+
+Modified:
+   trunk/default.cbd
+   trunk/include/OpenLayer/Glyph.hpp
+   trunk/src/Glyph.cpp
+Log:
+Updated glyph translation
+
+
+
+From juvinious at mail.berlios.de  Wed Aug 16 11:10:32 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Wed, 16 Aug 2006 11:10:32 +0200
+Subject: [Openlayer-svn] r100 - in trunk: . include/OpenLayer src
+Message-ID: <200608160910.k7G9AWaV019816@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-16 11:10:31 +0200 (Wed, 16 Aug 2006)
+New Revision: 100
+
+Modified:
+   trunk/default.cbd
+   trunk/include/OpenLayer/Glyph.hpp
+   trunk/src/Glyph.cpp
+Log:
+Improved hinting in fonts, should look better now. Still can't get the matrix math for italics to look nice. :(
+
+
+
+From juvinious at mail.berlios.de  Wed Aug 16 11:35:49 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Wed, 16 Aug 2006 11:35:49 +0200
+Subject: [Openlayer-svn] r101 - in trunk: include/OpenLayer src
+Message-ID: <200608160935.k7G9Znsr021693@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-16 11:35:49 +0200 (Wed, 16 Aug 2006)
+New Revision: 101
+
+Modified:
+   trunk/include/OpenLayer/Glyph.hpp
+   trunk/src/Glyph.cpp
+Log:
+Made Glyph Render with FastDraw
+
+
+
+From juvinious at mail.berlios.de  Wed Aug 16 14:50:16 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Wed, 16 Aug 2006 14:50:16 +0200
+Subject: [Openlayer-svn] r102 - trunk
+Message-ID: <200608161250.k7GCoGnT010591@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-16 14:50:04 +0200 (Wed, 16 Aug 2006)
+New Revision: 102
+
+Modified:
+   trunk/default.cbd
+Log:
+Updated to check for freetype on windows and prompt if not found
+
+
+
+From juvinious at mail.berlios.de  Wed Aug 16 18:11:06 2006
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Wed, 16 Aug 2006 18:11:06 +0200
+Subject: [Openlayer-svn] r103 - trunk
+Message-ID: <200608161611.k7GGB6L7008520@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-16 18:10:51 +0200 (Wed, 16 Aug 2006)
+New Revision: 103
+
+Modified:
+   trunk/default.cbd
+Log:
+added additional checks
+
+
+
+From juvinious at mail.berlios.de  Thu Aug 17 02:49:41 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Thu, 17 Aug 2006 02:49:41 +0200
+Subject: [Openlayer-svn] r104 - trunk/src
+Message-ID: <200608170049.k7H0nfZj021177@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-17 02:49:28 +0200 (Thu, 17 Aug 2006)
+New Revision: 104
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Updated Glyph so that glPointSize changes won't affect the rendering of fonts
+
+
+
+From juvinious at mail.berlios.de  Thu Aug 17 03:19:13 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Thu, 17 Aug 2006 03:19:13 +0200
+Subject: [Openlayer-svn] r105 - trunk/src
+Message-ID: <200608170119.k7H1JDrE026882@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-17 03:18:41 +0200 (Thu, 17 Aug 2006)
+New Revision: 105
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Updated Glyph rendering to compensate for changed projection modes
+
+
+
+From juvinious at mail.berlios.de  Thu Aug 17 06:39:33 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Thu, 17 Aug 2006 06:39:33 +0200
+Subject: [Openlayer-svn] r106 - trunk
+Message-ID: <200608170439.k7H4dXWh018155@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-17 06:39:31 +0200 (Thu, 17 Aug 2006)
+New Revision: 106
+
+Added:
+   trunk/Makefile
+Modified:
+   trunk/default.cbd
+Log:
+Added a makefile that invokes cbuild for those on linux with problems with shell scripts
+
+
+
+From fladimir2002 at mail.berlios.de  Thu Aug 17 23:00:35 2006
+From: fladimir2002 at mail.berlios.de (fladimir2002 at mail.berlios.de)
+Date: Thu, 17 Aug 2006 23:00:35 +0200
+Subject: [Openlayer-svn] r107 - trunk/src
+Message-ID: <200608172100.k7HL0ZVW017571@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-08-17 23:00:28 +0200 (Thu, 17 Aug 2006)
+New Revision: 107
+
+Modified:
+   trunk/src/Circle.cpp
+   trunk/src/Rectangle.cpp
+Log:
+- Fixed some issues with Ellipses and Rectangles
+
+
+
+From fladimir2002 at mail.berlios.de  Fri Aug 18 00:01:06 2006
+From: fladimir2002 at mail.berlios.de (fladimir2002 at mail.berlios.de)
+Date: Fri, 18 Aug 2006 00:01:06 +0200
+Subject: [Openlayer-svn] r108 - trunk/src
+Message-ID: <200608172201.k7HM16Ug022642@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-08-18 00:01:05 +0200 (Fri, 18 Aug 2006)
+New Revision: 108
+
+Modified:
+   trunk/src/Circle.cpp
+Log:
+- Changed Circle::ToPolygon to create the polygon in the counter-clockwise order as it should do it
+
+
+
+From fladimir2002 at mail.berlios.de  Fri Aug 18 00:20:42 2006
+From: fladimir2002 at mail.berlios.de (fladimir2002 at mail.berlios.de)
+Date: Fri, 18 Aug 2006 00:20:42 +0200
+Subject: [Openlayer-svn] r109 - trunk/src
+Message-ID: <200608172220.k7HMKg5t024223@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-08-18 00:20:40 +0200 (Fri, 18 Aug 2006)
+New Revision: 109
+
+Modified:
+   trunk/src/TexturedPoly.cpp
+Log:
+- Removed a debugging print from TexturedPoly
+
+
+
+From juvinious at mail.berlios.de  Fri Aug 18 07:36:53 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Fri, 18 Aug 2006 07:36:53 +0200
+Subject: [Openlayer-svn] r110 - trunk/src
+Message-ID: <200608180536.k7I5arBR009176@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-18 07:36:41 +0200 (Fri, 18 Aug 2006)
+New Revision: 110
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Modified glyph yet again, removing fastdraw as it seems it doesn\'t render in every scenario. Also made it so that fonts could look sharper.
+
+
+
+From juvinious at mail.berlios.de  Fri Aug 18 12:05:03 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Fri, 18 Aug 2006 12:05:03 +0200
+Subject: [Openlayer-svn] r111 - in trunk: include/OpenLayer src
+Message-ID: <200608181005.k7IA53R7029883@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-18 12:05:00 +0200 (Fri, 18 Aug 2006)
+New Revision: 111
+
+Modified:
+   trunk/include/OpenLayer/Glyph.hpp
+   trunk/src/Glyph.cpp
+Log:
+Intermitent changes to glyph before I refactor it
+
+
+
+From juvinious at mail.berlios.de  Fri Aug 18 17:46:58 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Fri, 18 Aug 2006 17:46:58 +0200
+Subject: [Openlayer-svn] r112 - trunk/src
+Message-ID: <200608181546.k7IFkwbB003290@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-18 17:46:56 +0200 (Fri, 18 Aug 2006)
+New Revision: 112
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Improved antialiasing of fonts
+
+
+
+From juvinious at mail.berlios.de  Fri Aug 18 18:23:30 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Fri, 18 Aug 2006 18:23:30 +0200
+Subject: [Openlayer-svn] r113 - trunk/src
+Message-ID: <200608181623.k7IGNU75006059@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-18 18:23:29 +0200 (Fri, 18 Aug 2006)
+New Revision: 113
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Fixed positioning of the Glyphs rendering as it was off compared to GlyphKeepers
+
+
+
+From juvinious at mail.berlios.de  Fri Aug 18 18:27:00 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Fri, 18 Aug 2006 18:27:00 +0200
+Subject: [Openlayer-svn] r114 - trunk/src
+Message-ID: <200608181627.k7IGR0Bm006676@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-18 18:27:00 +0200 (Fri, 18 Aug 2006)
+New Revision: 114
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Fixed drawCharacter function
+
+
+
+From juvinious at mail.berlios.de  Sat Aug 19 02:50:02 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Sat, 19 Aug 2006 02:50:02 +0200
+Subject: [Openlayer-svn] r115 - trunk/src
+Message-ID: <200608190050.k7J0o253007956@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-19 02:49:18 +0200 (Sat, 19 Aug 2006)
+New Revision: 115
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Fixed alpha for Glyph
+
+
+
+From juvinious at mail.berlios.de  Sat Aug 19 05:16:27 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Sat, 19 Aug 2006 05:16:27 +0200
+Subject: [Openlayer-svn] r116 - trunk/src
+Message-ID: <200608190316.k7J3GR9h017862@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-19 05:16:23 +0200 (Sat, 19 Aug 2006)
+New Revision: 116
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Improved the color conversion from grayscale to give color for renderer
+
+
+
+From juvinious at mail.berlios.de  Sat Aug 19 05:24:54 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Sat, 19 Aug 2006 05:24:54 +0200
+Subject: [Openlayer-svn] r117 - trunk/src
+Message-ID: <200608190324.k7J3OsH1022077@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-19 05:24:46 +0200 (Sat, 19 Aug 2006)
+New Revision: 117
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Added a check to ignore invisible pixels and not blit them
+
+
+
+From juvinious at mail.berlios.de  Sat Aug 19 06:09:19 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Sat, 19 Aug 2006 06:09:19 +0200
+Subject: [Openlayer-svn] r118 - trunk/src
+Message-ID: <200608190409.k7J49JUE030671@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-19 06:09:16 +0200 (Sat, 19 Aug 2006)
+New Revision: 118
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Cleaned up code, removing unecessary things in Glyph
+
+
+
+From juvinious at mail.berlios.de  Sun Aug 20 08:55:08 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Sun, 20 Aug 2006 08:55:08 +0200
+Subject: [Openlayer-svn] r119 - trunk/src
+Message-ID: <200608200655.k7K6t7OI008032@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-20 08:54:31 +0200 (Sun, 20 Aug 2006)
+New Revision: 119
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Fixed alignment issue brought up by indeterminatus
+
+
+
+From juvinious at mail.berlios.de  Mon Aug 21 08:54:24 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Mon, 21 Aug 2006 08:54:24 +0200
+Subject: [Openlayer-svn] r120 - trunk/src
+Message-ID: <200608210654.k7L6sOUn016568@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-08-21 08:54:08 +0200 (Mon, 21 Aug 2006)
+New Revision: 120
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Adjusted alpha problem, when converting luminance
+
+
+

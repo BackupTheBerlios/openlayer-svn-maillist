@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Openlayer-svn] r45 - in trunk: Manual Manual/Bitmap Manual/Blenders Manual/Canvas Manual/Circle Manual/Collision Manual/Ellipse Manual/Line Manual/LineStrip Manual/Placement Manual/Point Manual/Poly Manual/Rect Manual/Settings Manual/Setup Manual/Shape Manual/TextRenderer Manual/Transforms include/OpenLayer src
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/openlayer-svn/2006-April/index.html" >
+   <LINK REL="made" HREF="mailto:openlayer-svn%40lists.berlios.de?Subject=Re%3A%20%5BOpenlayer-svn%5D%20r45%20-%20in%20trunk%3A%20Manual%20Manual/Bitmap%20Manual/Blenders%20Manual/Canvas%20Manual/Circle%20Manual/Collision%20Manual/Ellipse%20Manual/Line%20Manual/LineStrip%20Manual/Placement%20Manual/Point%20Manual/Poly%20Manual/Rect%20Manual/Settings%20Manual/Setup%20Manual/Shape%20Manual/TextRenderer%20Manual/Transforms%20include/OpenLayer%20src&In-Reply-To=%3C200604122259.k3CMx1LP001919%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000037.html">
+   <LINK REL="Next"  HREF="000039.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Openlayer-svn] r45 - in trunk: Manual Manual/Bitmap Manual/Blenders Manual/Canvas Manual/Circle Manual/Collision Manual/Ellipse Manual/Line Manual/LineStrip Manual/Placement Manual/Point Manual/Poly Manual/Rect Manual/Settings Manual/Setup Manual/Shape Manual/TextRenderer Manual/Transforms include/OpenLayer src</H1>
+    <B>fladimir2002 at berlios.de</B> 
+    <A HREF="mailto:openlayer-svn%40lists.berlios.de?Subject=Re%3A%20%5BOpenlayer-svn%5D%20r45%20-%20in%20trunk%3A%20Manual%20Manual/Bitmap%20Manual/Blenders%20Manual/Canvas%20Manual/Circle%20Manual/Collision%20Manual/Ellipse%20Manual/Line%20Manual/LineStrip%20Manual/Placement%20Manual/Point%20Manual/Poly%20Manual/Rect%20Manual/Settings%20Manual/Setup%20Manual/Shape%20Manual/TextRenderer%20Manual/Transforms%20include/OpenLayer%20src&In-Reply-To=%3C200604122259.k3CMx1LP001919%40sheep.berlios.de%3E"
+       TITLE="[Openlayer-svn] r45 - in trunk: Manual Manual/Bitmap Manual/Blenders Manual/Canvas Manual/Circle Manual/Collision Manual/Ellipse Manual/Line Manual/LineStrip Manual/Placement Manual/Point Manual/Poly Manual/Rect Manual/Settings Manual/Setup Manual/Shape Manual/TextRenderer Manual/Transforms include/OpenLayer src">fladimir2002 at berlios.de
+       </A><BR>
+    <I>Thu Apr 13 00:59:01 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000037.html">[Openlayer-svn] r44 - in trunk/Manual: . Bitmap Canvas Circle Ellipse Line LineStrip Placement Point Poly Rect Setup Shape TextRenderer Transforms
+</A></li>
+        <LI>Next message: <A HREF="000039.html">[Openlayer-svn] r46 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#38">[ date ]</a>
+              <a href="thread.html#38">[ thread ]</a>
+              <a href="subject.html#38">[ subject ]</a>
+              <a href="author.html#38">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: fladimir2002
+Date: 2006-04-13 00:57:56 +0200 (Thu, 13 Apr 2006)
+New Revision: 45
+
+Added:
+   trunk/Manual/Collision/GetAllPoints.html
+   trunk/Manual/Collision/GetAllSegments.html
+   trunk/include/OpenLayer/LineStripRender.hpp
+   trunk/include/OpenLayer/RawLineStrip.hpp
+   trunk/include/OpenLayer/TexturedPoly.hpp
+   trunk/src/TexturedPoly.cpp
+Modified:
+   trunk/Manual/Bitmap.html
+   trunk/Manual/Bitmap/BlitStretched.html
+   trunk/Manual/Bitmap/BlitTransformed.html
+   trunk/Manual/Bitmap/GetPixel.html
+   trunk/Manual/Bitmap/GetPixelPacked.html
+   trunk/Manual/Bitmap/Height.html
+   trunk/Manual/Bitmap/IsValid.html
+   trunk/Manual/Bitmap/SendToGPU.html
+   trunk/Manual/Bitmap/TexturedQuad.html
+   trunk/Manual/Bitmap/UnloadFromGPU.html
+   trunk/Manual/Bitmap/UnloadToMemory.html
+   trunk/Manual/Bitmap/UseAutoDelete.html
+   trunk/Manual/Blenders/Pop.html
+   trunk/Manual/Blenders/Push.html
+   trunk/Manual/Canvas/Height.html
+   trunk/Manual/Canvas/Pop.html
+   trunk/Manual/Canvas/Push.html
+   trunk/Manual/Circle/DrawDisk.html
+   trunk/Manual/Circle/SetRadius.html
+   trunk/Manual/Collision.html
+   trunk/Manual/Collision/GetNormal.html
+   trunk/Manual/Collision/GetPoint.html
+   trunk/Manual/Collision/GetSegment.html
+   trunk/Manual/Collision/IsCollision.html
+   trunk/Manual/Ellipse/Circle.html
+   trunk/Manual/Ellipse/Draw.html
+   trunk/Manual/Ellipse/DrawDisk.html
+   trunk/Manual/Ellipse/DrawOutline.html
+   trunk/Manual/Ellipse/SetRadius.html
+   trunk/Manual/Line/Draw.html
+   trunk/Manual/Line/GetNormal.html
+   trunk/Manual/LineStrip/Draw.html
+   trunk/Manual/Placement/RotateBy.html
+   trunk/Manual/Placement/SetPosition.html
+   trunk/Manual/Placement/SetRotation.html
+   trunk/Manual/Placement/SetStretch.html
+   trunk/Manual/Point/Draw.html
+   trunk/Manual/Poly/Draw.html
+   trunk/Manual/Poly/DrawOutline.html
+   trunk/Manual/Rect/Draw.html
+   trunk/Manual/Rect/DrawOutline.html
+   trunk/Manual/Settings/StoreMemoryBitmaps.html
+   trunk/Manual/Setup/GetWindowHeight.html
+   trunk/Manual/Shape/Draw.html
+   trunk/Manual/Shape/DrawOutline.html
+   trunk/Manual/Shape/Ellipse.html
+   trunk/Manual/Shape/Line.html
+   trunk/Manual/Shape/Point.html
+   trunk/Manual/Shape/RecordDraw.html
+   trunk/Manual/Shape/Rect.html
+   trunk/Manual/Shape/RotateBy.html
+   trunk/Manual/TextRenderer.html
+   trunk/Manual/TextRenderer/Height.html
+   trunk/Manual/TextRenderer/IsValid.html
+   trunk/Manual/TextRenderer/Load.html
+   trunk/Manual/TextRenderer/SendToGPU.html
+   trunk/Manual/TextRenderer/UnloadFromGPU.html
+   trunk/Manual/TextRenderer/UseAutoDelete.html
+   trunk/Manual/Transforms/PopPlacement.html
+   trunk/Manual/Transforms/PushPlacement.html
+   trunk/Manual/Transforms/SetPosition.html
+   trunk/Manual/Transforms/SetRotation.html
+   trunk/Manual/Transforms/SetStretch.html
+   trunk/include/OpenLayer/Bitmap.hpp
+   trunk/include/OpenLayer/Collisions.hpp
+   trunk/include/OpenLayer/LineStrip.hpp
+   trunk/include/OpenLayer/Polygon.hpp
+   trunk/include/OpenLayer/RenderModes.hpp
+   trunk/include/OpenLayer/Vec2D.hpp
+   trunk/include/OpenLayer/VertexListCollision.hpp
+   trunk/src/Bitmap.cpp
+   trunk/src/Collisions.cpp
+   trunk/src/LineStrip.cpp
+   trunk/src/Polygon.cpp
+   trunk/src/RenderModes.cpp
+Log:
+- Added textured polygons
+- Added Collision::GetAllPoints and Collision::GetAllSegments which return the points and segments of all simultaneous collisions
+- Merged LineStrip and Polygon::DrawOutline
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000037.html">[Openlayer-svn] r44 - in trunk/Manual: . Bitmap Canvas Circle Ellipse Line LineStrip Placement Point Poly Rect Setup Shape TextRenderer Transforms
+</A></li>
+	<LI>Next message: <A HREF="000039.html">[Openlayer-svn] r46 - trunk
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#38">[ date ]</a>
+              <a href="thread.html#38">[ thread ]</a>
+              <a href="subject.html#38">[ subject ]</a>
+              <a href="author.html#38">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/openlayer-svn">More information about the Openlayer-svn
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,52 @@
+From juvinious at mail.berlios.de  Tue Jul 17 21:48:03 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Tue, 17 Jul 2007 21:48:03 +0200
+Subject: [Openlayer-svn] r177 - in trunk: . build
+Message-ID: <200707171948.l6HJm3mO006148@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-07-17 21:47:36 +0200 (Tue, 17 Jul 2007)
+New Revision: 177
+
+Modified:
+   trunk/CMakeLists.txt
+   trunk/build/OpenLayer.hpp.in
+Log:
+Fixed building DLL problem under windows
+
+
+
+From juvinious at mail.berlios.de  Wed Jul 18 09:53:27 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Wed, 18 Jul 2007 09:53:27 +0200
+Subject: [Openlayer-svn] r178 - trunk
+Message-ID: <200707180753.l6I7rRRr011963@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-07-18 09:53:12 +0200 (Wed, 18 Jul 2007)
+New Revision: 178
+
+Modified:
+   trunk/README
+Log:
+Made a change in README
+
+
+
+From juvinious at mail.berlios.de  Wed Jul 18 19:10:17 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Wed, 18 Jul 2007 19:10:17 +0200
+Subject: [Openlayer-svn] r179 - trunk
+Message-ID: <200707181710.l6IHAHWh023856@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-07-18 19:09:55 +0200 (Wed, 18 Jul 2007)
+New Revision: 179
+
+Modified:
+   trunk/README
+Log:
+Updated README
+
+
+

@@ -1,0 +1,280 @@
+From juvinious at mail.berlios.de  Tue Jan  9 18:44:37 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Tue, 9 Jan 2007 18:44:37 +0100
+Subject: [Openlayer-svn] r155 - in trunk: . build include include/OpenLayer
+	src
+Message-ID: <200701091744.l09Hib3L017104@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-01-09 18:44:16 +0100 (Tue, 09 Jan 2007)
+New Revision: 155
+
+Modified:
+   trunk/build/OpenLayer.hpp.in
+   trunk/build/header.cbd
+   trunk/default.cbd
+   trunk/include/OpenLayer.hpp
+   trunk/include/OpenLayer/Glyph.hpp
+   trunk/include/OpenLayer/TextRenderer.hpp
+   trunk/src/Glyph.cpp
+   trunk/src/TextRenderer.cpp
+Log:
+Updated cbuild.c script to properly build without USE_NO_TTF. Also updated textrender to not completely disable on OL_NO_TTF so as to be able to use textRender as normal, yet with no textoutput avoiding errors and broken builds
+
+
+
+From juvinious at mail.berlios.de  Tue Jan  9 18:54:04 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Tue, 9 Jan 2007 18:54:04 +0100
+Subject: [Openlayer-svn] r156 - trunk/include
+Message-ID: <200701091754.l09Hs47A032352@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-01-09 18:53:56 +0100 (Tue, 09 Jan 2007)
+New Revision: 156
+
+Modified:
+   trunk/include/OpenLayer.hpp
+Log:
+Reverted OpenLayer.hpp
+
+
+
+From juvinious at mail.berlios.de  Tue Jan  9 19:23:04 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Tue, 9 Jan 2007 19:23:04 +0100
+Subject: [Openlayer-svn] r157 - trunk
+Message-ID: <200701091823.l09IN4rj003685@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-01-09 19:22:59 +0100 (Tue, 09 Jan 2007)
+New Revision: 157
+
+Modified:
+   trunk/default.cbd
+Log:
+Fixed windows portion of OL_NO_TTF
+
+
+
+From juvinious at mail.berlios.de  Sun Jan 14 03:11:08 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Sun, 14 Jan 2007 03:11:08 +0100
+Subject: [Openlayer-svn] r158 - trunk/src
+Message-ID: <200701140211.l0E2B8cn024806@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-01-14 03:11:02 +0100 (Sun, 14 Jan 2007)
+New Revision: 158
+
+Modified:
+   trunk/src/Bitmap.cpp
+Log:
+Added in fix for bitmap deletion from tobing, thanks. :)
+
+
+
+From juvinious at mail.berlios.de  Sun Jan 14 10:42:44 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Sun, 14 Jan 2007 10:42:44 +0100
+Subject: [Openlayer-svn] r159 - in trunk: . build include include/OpenLayer
+	src utils
+Message-ID: <200701140942.l0E9giF0027054@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-01-14 10:40:58 +0100 (Sun, 14 Jan 2007)
+New Revision: 159
+
+Added:
+   trunk/include/OpenLayer/Declspec.hpp
+   trunk/include/OpenLayer/loadpng.h
+   trunk/src/loadpng.c
+   trunk/src/regpng.c
+   trunk/src/savepng.c
+Removed:
+   trunk/utils/loadpng/
+Modified:
+   trunk/CMakeLists.txt
+   trunk/build/OpenLayer.hpp.in
+   trunk/build/header.cbd
+   trunk/default.cbd
+   trunk/include/OpenLayer.hpp
+   trunk/include/OpenLayer/Animation.hpp
+   trunk/include/OpenLayer/Bitmap.hpp
+   trunk/include/OpenLayer/Blenders.hpp
+   trunk/include/OpenLayer/Canvas.hpp
+   trunk/include/OpenLayer/Circle.hpp
+   trunk/include/OpenLayer/Collisions.hpp
+   trunk/include/OpenLayer/Effects.hpp
+   trunk/include/OpenLayer/FpsCounter.hpp
+   trunk/include/OpenLayer/Framebuffer.hpp
+   trunk/include/OpenLayer/GarbageCollector.hpp
+   trunk/include/OpenLayer/General.hpp
+   trunk/include/OpenLayer/GfxRend.hpp
+   trunk/include/OpenLayer/GlDriver.hpp
+   trunk/include/OpenLayer/Glyph.hpp
+   trunk/include/OpenLayer/Includes.hpp
+   trunk/include/OpenLayer/Internal.hpp
+   trunk/include/OpenLayer/Line.hpp
+   trunk/include/OpenLayer/LineStrip.hpp
+   trunk/include/OpenLayer/LineStripRender.hpp
+   trunk/include/OpenLayer/Matrix.hpp
+   trunk/include/OpenLayer/Mouse.hpp
+   trunk/include/OpenLayer/OlRectangle.hpp
+   trunk/include/OpenLayer/PendingLoad.hpp
+   trunk/include/OpenLayer/Placement.hpp
+   trunk/include/OpenLayer/Point.hpp
+   trunk/include/OpenLayer/Polygon.hpp
+   trunk/include/OpenLayer/RawLineStrip.hpp
+   trunk/include/OpenLayer/Rectangle.hpp
+   trunk/include/OpenLayer/RenderModes.hpp
+   trunk/include/OpenLayer/Rgba.hpp
+   trunk/include/OpenLayer/Settings.hpp
+   trunk/include/OpenLayer/Setup.hpp
+   trunk/include/OpenLayer/Shape.hpp
+   trunk/include/OpenLayer/TextRenderer.hpp
+   trunk/include/OpenLayer/TextureInfo.hpp
+   trunk/include/OpenLayer/TexturedPoly.hpp
+   trunk/include/OpenLayer/TransformMatrix.hpp
+   trunk/include/OpenLayer/Transforms.hpp
+   trunk/include/OpenLayer/Vec2D.hpp
+   trunk/include/OpenLayer/VertexListCollision.hpp
+Log:
+Merged loadpng into the library no need to use it as an external library if png support is enabled, just link against libpng. Also added in groundwork to setup OpenLayer for dll support, just need to add in the build rules to cbuild and cmake. Else you can do it manually by setting preprocessors OL_LIB_BUILD and OL_SHARED during library compilation. When using it with your apps just set OL_SHARED
+
+
+
+From juvinious at mail.berlios.de  Sun Jan 14 10:44:45 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Sun, 14 Jan 2007 10:44:45 +0100
+Subject: [Openlayer-svn] r160 - trunk
+Message-ID: <200701140944.l0E9ijx7027936@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-01-14 10:44:34 +0100 (Sun, 14 Jan 2007)
+New Revision: 160
+
+Modified:
+   trunk/INSTALL
+   trunk/README
+Log:
+Modified README and INSTALL to reflect the loadpng changes
+
+
+
+From juvinious at mail.berlios.de  Sun Jan 14 19:15:46 2007
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Sun, 14 Jan 2007 19:15:46 +0100
+Subject: [Openlayer-svn] r161 - in trunk: . build demos include/OpenLayer
+Message-ID: <200701141815.l0EIFkhk025075@sheep.berlios.de>
+
+Author: juvinious
+Date: 2007-01-14 19:15:32 +0100 (Sun, 14 Jan 2007)
+New Revision: 161
+
+Added:
+   trunk/demos/CMakeLists.txt
+Removed:
+   trunk/build/ldpng-build.cbd
+   trunk/demos/Makefile
+Modified:
+   trunk/CMakeLists.txt
+   trunk/default.cbd
+   trunk/include/OpenLayer/General.hpp
+   trunk/include/OpenLayer/Internal.hpp
+   trunk/include/OpenLayer/RenderModes.hpp
+Log:
+Fixed minor issue with exported symbols, removed other loadpng references. Removed a stagnat makefile in demos dir
+
+
+
+From fladimir2002 at mail.berlios.de  Thu Jan 25 19:47:26 2007
+From: fladimir2002 at mail.berlios.de (fladimir2002 at mail.berlios.de)
+Date: Thu, 25 Jan 2007 19:47:26 +0100
+Subject: [Openlayer-svn] r162 - in trunk: include/OpenLayer src
+Message-ID: <200701251847.l0PIlQqT032080@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2007-01-25 19:47:10 +0100 (Thu, 25 Jan 2007)
+New Revision: 162
+
+Modified:
+   trunk/include/OpenLayer/Line.hpp
+   trunk/src/Animation.cpp
+   trunk/src/Bitmap.cpp
+   trunk/src/Line.cpp
+Log:
+- Added SiegeLord's Line::GetShortestDistanceTo(Vec2D point)
+
+
+
+From fladimir2002 at mail.berlios.de  Wed Jan 31 14:18:57 2007
+From: fladimir2002 at mail.berlios.de (fladimir2002 at mail.berlios.de)
+Date: Wed, 31 Jan 2007 14:18:57 +0100
+Subject: [Openlayer-svn] r163 - trunk/src
+Message-ID: <200701311318.l0VDIvxo017071@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2007-01-31 14:18:56 +0100 (Wed, 31 Jan 2007)
+New Revision: 163
+
+Modified:
+   trunk/src/Line.cpp
+Log:
+- Fixed the parameter names in Line::GetShortestDistanceTo
+
+
+
+From fladimir2002 at mail.berlios.de  Wed Jan 31 14:22:29 2007
+From: fladimir2002 at mail.berlios.de (fladimir2002 at mail.berlios.de)
+Date: Wed, 31 Jan 2007 14:22:29 +0100
+Subject: [Openlayer-svn] r164 - trunk
+Message-ID: <200701311322.l0VDMTiD017466@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2007-01-31 14:22:27 +0100 (Wed, 31 Jan 2007)
+New Revision: 164
+
+Modified:
+   trunk/INSTALL
+Log:
+- Fixed the linker line in the install instructions
+
+
+
+From fladimir2002 at mail.berlios.de  Wed Jan 31 14:37:46 2007
+From: fladimir2002 at mail.berlios.de (fladimir2002 at mail.berlios.de)
+Date: Wed, 31 Jan 2007 14:37:46 +0100
+Subject: [Openlayer-svn] r165 - in trunk/demos: gamedemo gameloop textdemo
+Message-ID: <200701311337.l0VDbkXZ018360@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2007-01-31 14:37:43 +0100 (Wed, 31 Jan 2007)
+New Revision: 165
+
+Modified:
+   trunk/demos/gamedemo/Demo.cpp
+   trunk/demos/gameloop/Main.cpp
+   trunk/demos/textdemo/Main.cpp
+Log:
+- Now the demos don't use the deprecated GfxRend
+
+
+
+From fladimir2002 at mail.berlios.de  Wed Jan 31 22:47:16 2007
+From: fladimir2002 at mail.berlios.de (fladimir2002 at mail.berlios.de)
+Date: Wed, 31 Jan 2007 22:47:16 +0100
+Subject: [Openlayer-svn] r166 - trunk/src
+Message-ID: <200701312147.l0VLlGIN016019@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2007-01-31 22:47:13 +0100 (Wed, 31 Jan 2007)
+New Revision: 166
+
+Modified:
+   trunk/src/Line.cpp
+Log:
+- Further fixed Line::GetShortestDistanceTo
+
+
+

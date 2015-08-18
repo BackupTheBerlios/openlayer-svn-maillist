@@ -1,0 +1,17 @@
+From juvinious at mail.berlios.de  Wed Dec 13 02:13:43 2006
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Wed, 13 Dec 2006 02:13:43 +0100
+Subject: [Openlayer-svn] r154 - trunk
+Message-ID: <200612130113.kBD1DhrG013528@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-12-13 02:13:38 +0100 (Wed, 13 Dec 2006)
+New Revision: 154
+
+Modified:
+   trunk/INSTALL
+Log:
+Updated INSTALL text to comform to recent changes
+
+
+

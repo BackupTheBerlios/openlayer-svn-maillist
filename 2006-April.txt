@@ -1,0 +1,604 @@
+From fladimir2002 at berlios.de  Sat Apr  1 15:29:46 2006
+From: fladimir2002 at berlios.de (fladimir2002 at berlios.de)
+Date: Sat, 1 Apr 2006 15:29:46 +0200
+Subject: [Openlayer-svn] r42 - in trunk: Manual/Shape include/OpenLayer src
+Message-ID: <200604011329.k31DTkdG028832@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-04-01 15:29:14 +0200 (Sat, 01 Apr 2006)
+New Revision: 42
+
+Added:
+   trunk/Manual/Shape/DrawRecord.html
+   trunk/Manual/Shape/RotateBy.html
+   trunk/Manual/Shape/TransformBy.html
+Modified:
+   trunk/include/OpenLayer/Rectangle.hpp
+   trunk/include/OpenLayer/Shape.hpp
+   trunk/src/Shape.cpp
+Log:
+Fixed the "undefined reference to 'vtable of Shape'" -issues
+
+
+
+From fladimir2002 at berlios.de  Mon Apr 10 21:34:04 2006
+From: fladimir2002 at berlios.de (fladimir2002 at berlios.de)
+Date: Mon, 10 Apr 2006 21:34:04 +0200
+Subject: [Openlayer-svn] r43 - in trunk: include include/OpenLayer src
+Message-ID: <200604101934.k3AJY4mn024070@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-04-10 21:33:38 +0200 (Mon, 10 Apr 2006)
+New Revision: 43
+
+Modified:
+   trunk/include/OpenLayer.hpp
+   trunk/include/OpenLayer/Bitmap.hpp
+   trunk/include/OpenLayer/Circle.hpp
+   trunk/include/OpenLayer/Collisions.hpp
+   trunk/include/OpenLayer/General.hpp
+   trunk/include/OpenLayer/Line.hpp
+   trunk/include/OpenLayer/LineStrip.hpp
+   trunk/include/OpenLayer/Placement.hpp
+   trunk/include/OpenLayer/Point.hpp
+   trunk/include/OpenLayer/Polygon.hpp
+   trunk/include/OpenLayer/Rectangle.hpp
+   trunk/include/OpenLayer/Shape.hpp
+   trunk/include/OpenLayer/Vec2D.hpp
+   trunk/src/Bitmap.cpp
+   trunk/src/Circle.cpp
+   trunk/src/Collisions.cpp
+   trunk/src/Line.cpp
+   trunk/src/LineStrip.cpp
+   trunk/src/Placement.cpp
+   trunk/src/Polygon.cpp
+   trunk/src/Rectangle.cpp
+Log:
+Fixed a problem with collision polygon generation (one minus sign in a wrong place ;)
+
+
+
+From fladimir2002 at berlios.de  Mon Apr 10 22:10:41 2006
+From: fladimir2002 at berlios.de (fladimir2002 at berlios.de)
+Date: Mon, 10 Apr 2006 22:10:41 +0200
+Subject: [Openlayer-svn] r44 - in trunk/Manual: . Bitmap Canvas Circle Ellipse Line LineStrip Placement Point Poly Rect Setup Shape TextRenderer Transforms
+Message-ID: <200604102010.k3AKAfrm016377@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-04-10 22:09:32 +0200 (Mon, 10 Apr 2006)
+New Revision: 44
+
+Added:
+   trunk/Manual/Collides.html
+Modified:
+   trunk/Manual/Bitmap.html
+   trunk/Manual/Bitmap/BlitStretched.html
+   trunk/Manual/Bitmap/BlitTransformed.html
+   trunk/Manual/Bitmap/GetCollisionPoly.html
+   trunk/Manual/Bitmap/GetMemoryBitmap.html
+   trunk/Manual/Bitmap/GetPixel.html
+   trunk/Manual/Bitmap/GetPixelPacked.html
+   trunk/Manual/Bitmap/Height.html
+   trunk/Manual/Bitmap/IsValid.html
+   trunk/Manual/Bitmap/Save.html
+   trunk/Manual/Bitmap/TexturedQuad.html
+   trunk/Manual/Bitmap/UseAutoDelete.html
+   trunk/Manual/Bitmap/Width.html
+   trunk/Manual/Canvas/GetMemoryBitmap.html
+   trunk/Manual/Canvas/Height.html
+   trunk/Manual/Canvas/Save.html
+   trunk/Manual/Canvas/Width.html
+   trunk/Manual/Circle/DrawDisk.html
+   trunk/Manual/Circle/SetRadius.html
+   trunk/Manual/Ellipse/Circle.html
+   trunk/Manual/Ellipse/Draw.html
+   trunk/Manual/Ellipse/DrawDisk.html
+   trunk/Manual/Ellipse/DrawOutline.html
+   trunk/Manual/Ellipse/SetRadius.html
+   trunk/Manual/Line/Collides.html
+   trunk/Manual/Line/Draw.html
+   trunk/Manual/LineStrip/Draw.html
+   trunk/Manual/Placement/MoveBy.html
+   trunk/Manual/Placement/RotateBy.html
+   trunk/Manual/Placement/SetRotation.html
+   trunk/Manual/Placement/SetStretch.html
+   trunk/Manual/Point/Draw.html
+   trunk/Manual/Poly/Collides.html
+   trunk/Manual/Poly/Draw.html
+   trunk/Manual/Poly/DrawOutline.html
+   trunk/Manual/Poly/GetNumberOfVertices.html
+   trunk/Manual/Rect/Draw.html
+   trunk/Manual/Rect/DrawOutline.html
+   trunk/Manual/Setup/GetWindowHeight.html
+   trunk/Manual/Setup/GetWindowWidth.html
+   trunk/Manual/Shape/Draw.html
+   trunk/Manual/Shape/DrawOutline.html
+   trunk/Manual/Shape/Ellipse.html
+   trunk/Manual/Shape/Line.html
+   trunk/Manual/Shape/MoveBy.html
+   trunk/Manual/Shape/Point.html
+   trunk/Manual/Shape/Poly.html
+   trunk/Manual/Shape/RecordDraw.html
+   trunk/Manual/Shape/Rect.html
+   trunk/Manual/Shape/RotateBy.html
+   trunk/Manual/TextRenderer.html
+   trunk/Manual/TextRenderer/Height.html
+   trunk/Manual/TextRenderer/IsValid.html
+   trunk/Manual/TextRenderer/Load.html
+   trunk/Manual/TextRenderer/UseAutoDelete.html
+   trunk/Manual/TextRenderer/Width.html
+   trunk/Manual/Transforms/PopPlacement.html
+   trunk/Manual/Transforms/PushPlacement.html
+   trunk/Manual/Transforms/SetRotation.html
+   trunk/Manual/Transforms/SetStretch.html
+Log:
+Updated the manual (for example, to not to show any references to the non-existent CollisionPoly class)
+
+
+
+From fladimir2002 at berlios.de  Thu Apr 13 00:59:01 2006
+From: fladimir2002 at berlios.de (fladimir2002 at berlios.de)
+Date: Thu, 13 Apr 2006 00:59:01 +0200
+Subject: [Openlayer-svn] r45 - in trunk: Manual Manual/Bitmap Manual/Blenders Manual/Canvas Manual/Circle Manual/Collision Manual/Ellipse Manual/Line Manual/LineStrip Manual/Placement Manual/Point Manual/Poly Manual/Rect Manual/Settings Manual/Setup Manual/Shape Manual/TextRenderer Manual/Transforms include/OpenLayer src
+Message-ID: <200604122259.k3CMx1LP001919@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-04-13 00:57:56 +0200 (Thu, 13 Apr 2006)
+New Revision: 45
+
+Added:
+   trunk/Manual/Collision/GetAllPoints.html
+   trunk/Manual/Collision/GetAllSegments.html
+   trunk/include/OpenLayer/LineStripRender.hpp
+   trunk/include/OpenLayer/RawLineStrip.hpp
+   trunk/include/OpenLayer/TexturedPoly.hpp
+   trunk/src/TexturedPoly.cpp
+Modified:
+   trunk/Manual/Bitmap.html
+   trunk/Manual/Bitmap/BlitStretched.html
+   trunk/Manual/Bitmap/BlitTransformed.html
+   trunk/Manual/Bitmap/GetPixel.html
+   trunk/Manual/Bitmap/GetPixelPacked.html
+   trunk/Manual/Bitmap/Height.html
+   trunk/Manual/Bitmap/IsValid.html
+   trunk/Manual/Bitmap/SendToGPU.html
+   trunk/Manual/Bitmap/TexturedQuad.html
+   trunk/Manual/Bitmap/UnloadFromGPU.html
+   trunk/Manual/Bitmap/UnloadToMemory.html
+   trunk/Manual/Bitmap/UseAutoDelete.html
+   trunk/Manual/Blenders/Pop.html
+   trunk/Manual/Blenders/Push.html
+   trunk/Manual/Canvas/Height.html
+   trunk/Manual/Canvas/Pop.html
+   trunk/Manual/Canvas/Push.html
+   trunk/Manual/Circle/DrawDisk.html
+   trunk/Manual/Circle/SetRadius.html
+   trunk/Manual/Collision.html
+   trunk/Manual/Collision/GetNormal.html
+   trunk/Manual/Collision/GetPoint.html
+   trunk/Manual/Collision/GetSegment.html
+   trunk/Manual/Collision/IsCollision.html
+   trunk/Manual/Ellipse/Circle.html
+   trunk/Manual/Ellipse/Draw.html
+   trunk/Manual/Ellipse/DrawDisk.html
+   trunk/Manual/Ellipse/DrawOutline.html
+   trunk/Manual/Ellipse/SetRadius.html
+   trunk/Manual/Line/Draw.html
+   trunk/Manual/Line/GetNormal.html
+   trunk/Manual/LineStrip/Draw.html
+   trunk/Manual/Placement/RotateBy.html
+   trunk/Manual/Placement/SetPosition.html
+   trunk/Manual/Placement/SetRotation.html
+   trunk/Manual/Placement/SetStretch.html
+   trunk/Manual/Point/Draw.html
+   trunk/Manual/Poly/Draw.html
+   trunk/Manual/Poly/DrawOutline.html
+   trunk/Manual/Rect/Draw.html
+   trunk/Manual/Rect/DrawOutline.html
+   trunk/Manual/Settings/StoreMemoryBitmaps.html
+   trunk/Manual/Setup/GetWindowHeight.html
+   trunk/Manual/Shape/Draw.html
+   trunk/Manual/Shape/DrawOutline.html
+   trunk/Manual/Shape/Ellipse.html
+   trunk/Manual/Shape/Line.html
+   trunk/Manual/Shape/Point.html
+   trunk/Manual/Shape/RecordDraw.html
+   trunk/Manual/Shape/Rect.html
+   trunk/Manual/Shape/RotateBy.html
+   trunk/Manual/TextRenderer.html
+   trunk/Manual/TextRenderer/Height.html
+   trunk/Manual/TextRenderer/IsValid.html
+   trunk/Manual/TextRenderer/Load.html
+   trunk/Manual/TextRenderer/SendToGPU.html
+   trunk/Manual/TextRenderer/UnloadFromGPU.html
+   trunk/Manual/TextRenderer/UseAutoDelete.html
+   trunk/Manual/Transforms/PopPlacement.html
+   trunk/Manual/Transforms/PushPlacement.html
+   trunk/Manual/Transforms/SetPosition.html
+   trunk/Manual/Transforms/SetRotation.html
+   trunk/Manual/Transforms/SetStretch.html
+   trunk/include/OpenLayer/Bitmap.hpp
+   trunk/include/OpenLayer/Collisions.hpp
+   trunk/include/OpenLayer/LineStrip.hpp
+   trunk/include/OpenLayer/Polygon.hpp
+   trunk/include/OpenLayer/RenderModes.hpp
+   trunk/include/OpenLayer/Vec2D.hpp
+   trunk/include/OpenLayer/VertexListCollision.hpp
+   trunk/src/Bitmap.cpp
+   trunk/src/Collisions.cpp
+   trunk/src/LineStrip.cpp
+   trunk/src/Polygon.cpp
+   trunk/src/RenderModes.cpp
+Log:
+- Added textured polygons
+- Added Collision::GetAllPoints and Collision::GetAllSegments which return the points and segments of all simultaneous collisions
+- Merged LineStrip and Polygon::DrawOutline
+
+
+
+
+From juvinious at berlios.de  Sat Apr 15 20:16:21 2006
+From: juvinious at berlios.de (juvinious at BerliOS)
+Date: Sat, 15 Apr 2006 20:16:21 +0200
+Subject: [Openlayer-svn] r46 - trunk
+Message-ID: <200604151816.k3FIGL56018880@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-04-15 20:15:56 +0200 (Sat, 15 Apr 2006)
+New Revision: 46
+
+Added:
+   trunk/buildme.bat
+Modified:
+   trunk/cbuild.c
+   trunk/default.cbd
+Log:
+Added a batch file to invoke cbuild on windows.
+
+
+
+
+From juvinious at berlios.de  Sat Apr 15 20:35:42 2006
+From: juvinious at berlios.de (juvinious at BerliOS)
+Date: Sat, 15 Apr 2006 20:35:42 +0200
+Subject: [Openlayer-svn] r47 - trunk
+Message-ID: <200604151835.k3FIZg7T027725@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-04-15 20:35:36 +0200 (Sat, 15 Apr 2006)
+New Revision: 47
+
+Modified:
+   trunk/cbuild.c
+   trunk/default.cbd
+Log:
+Updated cbuild script
+
+
+
+From juvinious at berlios.de  Sat Apr 15 21:17:51 2006
+From: juvinious at berlios.de (juvinious at BerliOS)
+Date: Sat, 15 Apr 2006 21:17:51 +0200
+Subject: [Openlayer-svn] r48 - trunk
+Message-ID: <200604151917.k3FJHpkv011379@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-04-15 21:17:49 +0200 (Sat, 15 Apr 2006)
+New Revision: 48
+
+Modified:
+   trunk/INSTALL
+   trunk/README
+   trunk/default.cbd
+Log:
+Updated INSTALL text file
+
+
+
+From juvinious at berlios.de  Sat Apr 15 21:25:35 2006
+From: juvinious at berlios.de (juvinious at BerliOS)
+Date: Sat, 15 Apr 2006 21:25:35 +0200
+Subject: [Openlayer-svn] r49 - trunk
+Message-ID: <200604151925.k3FJPZOD012444@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-04-15 21:25:31 +0200 (Sat, 15 Apr 2006)
+New Revision: 49
+
+Modified:
+   trunk/default.cbd
+Log:
+Fixed typo in cbuild script
+
+
+
+From juvinious at berlios.de  Sat Apr 15 22:24:29 2006
+From: juvinious at berlios.de (juvinious at BerliOS)
+Date: Sat, 15 Apr 2006 22:24:29 +0200
+Subject: [Openlayer-svn] r50 - trunk
+Message-ID: <200604152024.k3FKOTma020823@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-04-15 22:24:28 +0200 (Sat, 15 Apr 2006)
+New Revision: 50
+
+Modified:
+   trunk/Makefile
+   trunk/default.cbd
+Log:
+Deprecated makefile
+
+
+
+From juvinious at berlios.de  Sun Apr 16 06:57:45 2006
+From: juvinious at berlios.de (juvinious at BerliOS)
+Date: Sun, 16 Apr 2006 06:57:45 +0200
+Subject: [Openlayer-svn] r51 - trunk
+Message-ID: <200604160457.k3G4vjo1017248@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-04-16 06:57:42 +0200 (Sun, 16 Apr 2006)
+New Revision: 51
+
+Modified:
+   trunk/cbuild.c
+   trunk/default.cbd
+Log:
+changed install portions of cbuild script
+
+
+
+From fladimir2002 at berlios.de  Wed Apr 19 23:10:04 2006
+From: fladimir2002 at berlios.de (fladimir2002 at berlios.de)
+Date: Wed, 19 Apr 2006 23:10:04 +0200
+Subject: [Openlayer-svn] r52 - in trunk: Manual Manual/Bitmap Manual/Blenders Manual/Canvas Manual/Collision Manual/Line Manual/Placement Manual/Poly Manual/Setup Manual/Shape Manual/TextRenderer Manual/Transforms include/OpenLayer src
+Message-ID: <200604192110.k3JLA4sx007945@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-04-19 23:09:42 +0200 (Wed, 19 Apr 2006)
+New Revision: 52
+
+Modified:
+   trunk/Manual/Bitmap.html
+   trunk/Manual/Bitmap/BlitStretched.html
+   trunk/Manual/Bitmap/BlitTransformed.html
+   trunk/Manual/Bitmap/Destroy.html
+   trunk/Manual/Bitmap/GetPixel.html
+   trunk/Manual/Bitmap/GetPixelPacked.html
+   trunk/Manual/Bitmap/Height.html
+   trunk/Manual/Bitmap/IsValid.html
+   trunk/Manual/Bitmap/Load.html
+   trunk/Manual/Bitmap/Save.html
+   trunk/Manual/Bitmap/TexturedQuad.html
+   trunk/Manual/Blenders/Pop.html
+   trunk/Manual/Blenders/Push.html
+   trunk/Manual/Canvas/Height.html
+   trunk/Manual/Canvas/Pop.html
+   trunk/Manual/Canvas/Push.html
+   trunk/Manual/Canvas/Save.html
+   trunk/Manual/Collision/GetNormal.html
+   trunk/Manual/Line/GetNormal.html
+   trunk/Manual/Placement/MoveBy.html
+   trunk/Manual/Placement/RotateBy.html
+   trunk/Manual/Placement/SetPosition.html
+   trunk/Manual/Poly/GetNumberOfVertices.html
+   trunk/Manual/Setup/GetWindowHeight.html
+   trunk/Manual/Shape/MoveBy.html
+   trunk/Manual/Shape/Poly.html
+   trunk/Manual/Shape/RotateBy.html
+   trunk/Manual/TextRenderer.html
+   trunk/Manual/TextRenderer/Height.html
+   trunk/Manual/TextRenderer/IsValid.html
+   trunk/Manual/TextRenderer/Load.html
+   trunk/Manual/Transforms/PopPlacement.html
+   trunk/Manual/Transforms/PushPlacement.html
+   trunk/Manual/Transforms/SetPosition.html
+   trunk/include/OpenLayer/Point.hpp
+   trunk/include/OpenLayer/Polygon.hpp
+   trunk/include/OpenLayer/TexturedPoly.hpp
+   trunk/src/Polygon.cpp
+   trunk/src/TexturedPoly.cpp
+Log:
+- Added Poly::SetVertex
+- Added TexturedPoly to the manual
+- Some updates to the manual
+
+
+
+From fladimir2002 at berlios.de  Wed Apr 19 23:16:02 2006
+From: fladimir2002 at berlios.de (fladimir2002 at berlios.de)
+Date: Wed, 19 Apr 2006 23:16:02 +0200
+Subject: [Openlayer-svn] r53 - in trunk: include/OpenLayer src
+Message-ID: <200604192116.k3JLG2Mi008554@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-04-19 23:15:59 +0200 (Wed, 19 Apr 2006)
+New Revision: 53
+
+Modified:
+   trunk/include/OpenLayer/Circle.hpp
+   trunk/src/Circle.cpp
+Log:
+- Implemented Ellipse::ToPolygon
+
+
+
+From fladimir2002 at berlios.de  Wed Apr 19 23:25:12 2006
+From: fladimir2002 at berlios.de (fladimir2002 at berlios.de)
+Date: Wed, 19 Apr 2006 23:25:12 +0200
+Subject: [Openlayer-svn] r54 - trunk/Manual/Poly
+Message-ID: <200604192125.k3JLPC3a009317@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-04-19 23:25:09 +0200 (Wed, 19 Apr 2006)
+New Revision: 54
+
+Added:
+   trunk/Manual/Poly/TexturedPoly.html
+Log:
+- Added the TexturedPoly documentation (I'm having some problems caused by the limitations of my old PHP manual script so the Construct method won't be accessible...)
+
+
+
+From juvinious at berlios.de  Fri Apr 21 19:41:03 2006
+From: juvinious at berlios.de (juvinious at BerliOS)
+Date: Fri, 21 Apr 2006 19:41:03 +0200
+Subject: [Openlayer-svn] r55 - trunk
+Message-ID: <200604211741.k3LHf3AF029803@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-04-21 19:41:01 +0200 (Fri, 21 Apr 2006)
+New Revision: 55
+
+Modified:
+   trunk/cbuild.c
+Log:
+Updated cbuild.
+
+
+
+
+From juvinious at berlios.de  Sat Apr 22 23:52:02 2006
+From: juvinious at berlios.de (juvinious at BerliOS)
+Date: Sat, 22 Apr 2006 23:52:02 +0200
+Subject: [Openlayer-svn] r56 - trunk
+Message-ID: <200604222152.k3MLq2Kv019379@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-04-22 23:52:02 +0200 (Sat, 22 Apr 2006)
+New Revision: 56
+
+Modified:
+   trunk/cbuild.c
+Log:
+Fixed cbuild for MacOSX.
+
+
+
+
+From juvinious at berlios.de  Mon Apr 24 10:18:24 2006
+From: juvinious at berlios.de (juvinious at BerliOS)
+Date: Mon, 24 Apr 2006 10:18:24 +0200
+Subject: [Openlayer-svn] r57 - trunk
+Message-ID: <200604240818.k3O8IO2j000783@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-04-24 10:18:23 +0200 (Mon, 24 Apr 2006)
+New Revision: 57
+
+Modified:
+   trunk/cbuild.c
+Log:
+Fixed cbuild error on windows
+
+
+
+From juvinious at berlios.de  Mon Apr 24 10:27:03 2006
+From: juvinious at berlios.de (juvinious at BerliOS)
+Date: Mon, 24 Apr 2006 10:27:03 +0200
+Subject: [Openlayer-svn] r58 - trunk
+Message-ID: <200604240827.k3O8R3j0020186@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-04-24 10:27:00 +0200 (Mon, 24 Apr 2006)
+New Revision: 58
+
+Modified:
+   trunk/cbuild.c
+Log:
+Fixed cbuild
+
+
+
+From juvinious at berlios.de  Mon Apr 24 12:22:07 2006
+From: juvinious at berlios.de (juvinious at BerliOS)
+Date: Mon, 24 Apr 2006 12:22:07 +0200
+Subject: [Openlayer-svn] r59 - trunk
+Message-ID: <200604241022.k3OAM7h0026386@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-04-24 12:22:07 +0200 (Mon, 24 Apr 2006)
+New Revision: 59
+
+Modified:
+   trunk/cbuild.c
+Log:
+Cbuild stuff again. :)
+
+
+
+
+From fladimir2002 at berlios.de  Thu Apr 27 22:02:05 2006
+From: fladimir2002 at berlios.de (fladimir2002 at berlios.de)
+Date: Thu, 27 Apr 2006 22:02:05 +0200
+Subject: [Openlayer-svn] r60 - trunk/src
+Message-ID: <200604272002.k3RK259q023955@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-04-27 22:01:40 +0200 (Thu, 27 Apr 2006)
+New Revision: 60
+
+Modified:
+   trunk/src/Collisions.cpp
+Log:
+- Fixed the collision detection not showing that a collision happens
+
+
+
+From fladimir2002 at berlios.de  Fri Apr 28 20:08:21 2006
+From: fladimir2002 at berlios.de (fladimir2002 at berlios.de)
+Date: Fri, 28 Apr 2006 20:08:21 +0200
+Subject: [Openlayer-svn] r61 - trunk/src
+Message-ID: <200604281808.k3SI8Ldk027192@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-04-28 20:08:14 +0200 (Fri, 28 Apr 2006)
+New Revision: 61
+
+Modified:
+   trunk/src/GlDriver.cpp
+   trunk/src/TextureInfo.cpp
+Log:
+- Changed the preferred texture format to GL_RGB(A)8
+
+
+
+From fladimir2002 at berlios.de  Sat Apr 29 11:30:33 2006
+From: fladimir2002 at berlios.de (fladimir2002 at berlios.de)
+Date: Sat, 29 Apr 2006 11:30:33 +0200
+Subject: [Openlayer-svn] r62 - in trunk: include/OpenLayer src
+Message-ID: <200604290930.k3T9UXk2018270@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-04-29 11:30:28 +0200 (Sat, 29 Apr 2006)
+New Revision: 62
+
+Modified:
+   trunk/include/OpenLayer/Rectangle.hpp
+   trunk/src/GlDriver.cpp
+   trunk/src/Rectangle.cpp
+   trunk/src/TextureInfo.cpp
+Log:
+- Added Rect::ToPoly and Rect::GetVertices
+- Took away the GL_RGB(A)8:s as they didn't work
+
+
+
+From fladimir2002 at berlios.de  Sat Apr 29 13:48:32 2006
+From: fladimir2002 at berlios.de (fladimir2002 at berlios.de)
+Date: Sat, 29 Apr 2006 13:48:32 +0200
+Subject: [Openlayer-svn] r63 - trunk/src
+Message-ID: <200604291148.k3TBmWgt027152@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-04-29 13:48:15 +0200 (Sat, 29 Apr 2006)
+New Revision: 63
+
+Modified:
+   trunk/src/GlDriver.cpp
+Log:
+- Added Rect::ToPoly and Rect::GetVertices
+- Took away the GL_RGB(A)8:s as they didn't work
+
+
+

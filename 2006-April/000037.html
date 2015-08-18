@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Openlayer-svn] r44 - in trunk/Manual: . Bitmap Canvas Circle Ellipse Line LineStrip Placement Point Poly Rect Setup Shape TextRenderer Transforms
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/openlayer-svn/2006-April/index.html" >
+   <LINK REL="made" HREF="mailto:openlayer-svn%40lists.berlios.de?Subject=Re%3A%20%5BOpenlayer-svn%5D%20r44%20-%20in%20trunk/Manual%3A%20.%20Bitmap%20Canvas%20Circle%20Ellipse%20Line%20LineStrip%20Placement%20Point%20Poly%20Rect%20Setup%20Shape%20TextRenderer%20Transforms&In-Reply-To=%3C200604102010.k3AKAfrm016377%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000036.html">
+   <LINK REL="Next"  HREF="000038.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Openlayer-svn] r44 - in trunk/Manual: . Bitmap Canvas Circle Ellipse Line LineStrip Placement Point Poly Rect Setup Shape TextRenderer Transforms</H1>
+    <B>fladimir2002 at berlios.de</B> 
+    <A HREF="mailto:openlayer-svn%40lists.berlios.de?Subject=Re%3A%20%5BOpenlayer-svn%5D%20r44%20-%20in%20trunk/Manual%3A%20.%20Bitmap%20Canvas%20Circle%20Ellipse%20Line%20LineStrip%20Placement%20Point%20Poly%20Rect%20Setup%20Shape%20TextRenderer%20Transforms&In-Reply-To=%3C200604102010.k3AKAfrm016377%40sheep.berlios.de%3E"
+       TITLE="[Openlayer-svn] r44 - in trunk/Manual: . Bitmap Canvas Circle Ellipse Line LineStrip Placement Point Poly Rect Setup Shape TextRenderer Transforms">fladimir2002 at berlios.de
+       </A><BR>
+    <I>Mon Apr 10 22:10:41 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000036.html">[Openlayer-svn] r43 - in trunk: include include/OpenLayer src
+</A></li>
+        <LI>Next message: <A HREF="000038.html">[Openlayer-svn] r45 - in trunk: Manual Manual/Bitmap Manual/Blenders Manual/Canvas Manual/Circle Manual/Collision Manual/Ellipse Manual/Line Manual/LineStrip Manual/Placement Manual/Point Manual/Poly Manual/Rect Manual/Settings Manual/Setup Manual/Shape Manual/TextRenderer Manual/Transforms include/OpenLayer src
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#37">[ date ]</a>
+              <a href="thread.html#37">[ thread ]</a>
+              <a href="subject.html#37">[ subject ]</a>
+              <a href="author.html#37">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: fladimir2002
+Date: 2006-04-10 22:09:32 +0200 (Mon, 10 Apr 2006)
+New Revision: 44
+
+Added:
+   trunk/Manual/Collides.html
+Modified:
+   trunk/Manual/Bitmap.html
+   trunk/Manual/Bitmap/BlitStretched.html
+   trunk/Manual/Bitmap/BlitTransformed.html
+   trunk/Manual/Bitmap/GetCollisionPoly.html
+   trunk/Manual/Bitmap/GetMemoryBitmap.html
+   trunk/Manual/Bitmap/GetPixel.html
+   trunk/Manual/Bitmap/GetPixelPacked.html
+   trunk/Manual/Bitmap/Height.html
+   trunk/Manual/Bitmap/IsValid.html
+   trunk/Manual/Bitmap/Save.html
+   trunk/Manual/Bitmap/TexturedQuad.html
+   trunk/Manual/Bitmap/UseAutoDelete.html
+   trunk/Manual/Bitmap/Width.html
+   trunk/Manual/Canvas/GetMemoryBitmap.html
+   trunk/Manual/Canvas/Height.html
+   trunk/Manual/Canvas/Save.html
+   trunk/Manual/Canvas/Width.html
+   trunk/Manual/Circle/DrawDisk.html
+   trunk/Manual/Circle/SetRadius.html
+   trunk/Manual/Ellipse/Circle.html
+   trunk/Manual/Ellipse/Draw.html
+   trunk/Manual/Ellipse/DrawDisk.html
+   trunk/Manual/Ellipse/DrawOutline.html
+   trunk/Manual/Ellipse/SetRadius.html
+   trunk/Manual/Line/Collides.html
+   trunk/Manual/Line/Draw.html
+   trunk/Manual/LineStrip/Draw.html
+   trunk/Manual/Placement/MoveBy.html
+   trunk/Manual/Placement/RotateBy.html
+   trunk/Manual/Placement/SetRotation.html
+   trunk/Manual/Placement/SetStretch.html
+   trunk/Manual/Point/Draw.html
+   trunk/Manual/Poly/Collides.html
+   trunk/Manual/Poly/Draw.html
+   trunk/Manual/Poly/DrawOutline.html
+   trunk/Manual/Poly/GetNumberOfVertices.html
+   trunk/Manual/Rect/Draw.html
+   trunk/Manual/Rect/DrawOutline.html
+   trunk/Manual/Setup/GetWindowHeight.html
+   trunk/Manual/Setup/GetWindowWidth.html
+   trunk/Manual/Shape/Draw.html
+   trunk/Manual/Shape/DrawOutline.html
+   trunk/Manual/Shape/Ellipse.html
+   trunk/Manual/Shape/Line.html
+   trunk/Manual/Shape/MoveBy.html
+   trunk/Manual/Shape/Point.html
+   trunk/Manual/Shape/Poly.html
+   trunk/Manual/Shape/RecordDraw.html
+   trunk/Manual/Shape/Rect.html
+   trunk/Manual/Shape/RotateBy.html
+   trunk/Manual/TextRenderer.html
+   trunk/Manual/TextRenderer/Height.html
+   trunk/Manual/TextRenderer/IsValid.html
+   trunk/Manual/TextRenderer/Load.html
+   trunk/Manual/TextRenderer/UseAutoDelete.html
+   trunk/Manual/TextRenderer/Width.html
+   trunk/Manual/Transforms/PopPlacement.html
+   trunk/Manual/Transforms/PushPlacement.html
+   trunk/Manual/Transforms/SetRotation.html
+   trunk/Manual/Transforms/SetStretch.html
+Log:
+Updated the manual (for example, to not to show any references to the non-existent CollisionPoly class)
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000036.html">[Openlayer-svn] r43 - in trunk: include include/OpenLayer src
+</A></li>
+	<LI>Next message: <A HREF="000038.html">[Openlayer-svn] r45 - in trunk: Manual Manual/Bitmap Manual/Blenders Manual/Canvas Manual/Circle Manual/Collision Manual/Ellipse Manual/Line Manual/LineStrip Manual/Placement Manual/Point Manual/Poly Manual/Rect Manual/Settings Manual/Setup Manual/Shape Manual/TextRenderer Manual/Transforms include/OpenLayer src
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#37">[ date ]</a>
+              <a href="thread.html#37">[ thread ]</a>
+              <a href="subject.html#37">[ subject ]</a>
+              <a href="author.html#37">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/openlayer-svn">More information about the Openlayer-svn
+mailing list</a><br>
+</body></html>

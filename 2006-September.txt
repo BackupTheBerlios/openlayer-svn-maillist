@@ -1,0 +1,85 @@
+From juvinious at mail.berlios.de  Mon Sep  4 02:01:54 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Mon, 4 Sep 2006 02:01:54 +0200
+Subject: [Openlayer-svn] r121 - trunk/src
+Message-ID: <200609040001.k8401scC008208@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-09-04 02:01:40 +0200 (Mon, 04 Sep 2006)
+New Revision: 121
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Commited fix to save and restore the current transforms.
+
+
+
+From juvinious at mail.berlios.de  Mon Sep  4 03:36:00 2006
+From: juvinious at mail.berlios.de (juvinious at mail.berlios.de)
+Date: Mon, 4 Sep 2006 03:36:00 +0200
+Subject: [Openlayer-svn] r122 - trunk
+Message-ID: <200609040136.k841a06G030247@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-09-04 03:35:21 +0200 (Mon, 04 Sep 2006)
+New Revision: 122
+
+Modified:
+   trunk/default.cbd
+Log:
+Fixed loadpng install issue in build script
+
+
+
+From juvinious at mail.berlios.de  Sun Sep 10 20:44:34 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Sun, 10 Sep 2006 20:44:34 +0200
+Subject: [Openlayer-svn] r123 - trunk
+Message-ID: <200609101844.k8AIiYOH025512@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-09-10 20:44:33 +0200 (Sun, 10 Sep 2006)
+New Revision: 123
+
+Modified:
+   trunk/default.cbd
+Log:
+Updated the produced header so that the defines are on the top
+
+
+
+From juvinious at mail.berlios.de  Tue Sep 19 05:24:22 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Tue, 19 Sep 2006 05:24:22 +0200
+Subject: [Openlayer-svn] r124 - trunk/src
+Message-ID: <200609190324.k8J3OMPG018899@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-09-19 05:24:21 +0200 (Tue, 19 Sep 2006)
+New Revision: 124
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Fixed minor parse problem with va_list in Glyph
+
+
+
+From juvinious at mail.berlios.de  Tue Sep 19 05:49:38 2006
+From: juvinious at mail.berlios.de (juvinious at BerliOS)
+Date: Tue, 19 Sep 2006 05:49:38 +0200
+Subject: [Openlayer-svn] r125 - trunk/src
+Message-ID: <200609190349.k8J3ncqC020300@sheep.berlios.de>
+
+Author: juvinious
+Date: 2006-09-19 05:49:37 +0200 (Tue, 19 Sep 2006)
+New Revision: 125
+
+Modified:
+   trunk/src/Glyph.cpp
+Log:
+Missed a variable in the var_list. Fixed
+
+
+

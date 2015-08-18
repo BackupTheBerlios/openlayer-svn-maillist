@@ -1,0 +1,238 @@
+From bradeeoh at berlios.de  Thu Feb 23 22:51:21 2006
+From: bradeeoh at berlios.de (bradeeoh at berlios.de)
+Date: Thu, 23 Feb 2006 22:51:21 +0100
+Subject: [Openlayer-svn] r7 - trunk
+Message-ID: <200602232151.k1NLpLlj006035@sheep.berlios.de>
+
+Author: bradeeoh
+Date: 2006-02-23 22:51:16 +0100 (Thu, 23 Feb 2006)
+New Revision: 7
+
+Modified:
+   trunk/README
+Log:
+ONE FINAL commit email test (final assuming it works)
+
+
+
+From fladimir2002 at berlios.de  Thu Feb 23 23:46:28 2006
+From: fladimir2002 at berlios.de (fladimir2002 at berlios.de)
+Date: Thu, 23 Feb 2006 23:46:28 +0100
+Subject: [Openlayer-svn] r8 - in trunk/Manual: . Bitmap Blenders Canvas Circle Collision Ellipse Line LineStrip Placement Point Poly Rect Rgba Settings Setup Shape TextRenderer
+Message-ID: <200602232246.k1NMkSAG012807@sheep.berlios.de>
+
+Author: fladimir2002
+Date: 2006-02-23 23:45:48 +0100 (Thu, 23 Feb 2006)
+New Revision: 8
+
+Modified:
+   trunk/Manual/Bitmap.html
+   trunk/Manual/Bitmap/Blit.html
+   trunk/Manual/Bitmap/BlitDistorted.html
+   trunk/Manual/Bitmap/BlitRotated.html
+   trunk/Manual/Bitmap/BlitStretched.html
+   trunk/Manual/Bitmap/BlitTransformed.html
+   trunk/Manual/Bitmap/CopyFromScreen.html
+   trunk/Manual/Bitmap/Destroy.html
+   trunk/Manual/Bitmap/FastBlit.html
+   trunk/Manual/Bitmap/FinishFastBlitting.html
+   trunk/Manual/Bitmap/GetCollisionPoly.html
+   trunk/Manual/Bitmap/GetMemoryBitmap.html
+   trunk/Manual/Bitmap/GetPixel.html
+   trunk/Manual/Bitmap/GetPixelPacked.html
+   trunk/Manual/Bitmap/HasAlphaChannel.html
+   trunk/Manual/Bitmap/Height.html
+   trunk/Manual/Bitmap/IsValid.html
+   trunk/Manual/Bitmap/Load.html
+   trunk/Manual/Bitmap/LoadListOfBitmaps.html
+   trunk/Manual/Bitmap/Save.html
+   trunk/Manual/Bitmap/Select.html
+   trunk/Manual/Bitmap/SendToGPU.html
+   trunk/Manual/Bitmap/StartFastBlitting.html
+   trunk/Manual/Bitmap/TexturedQuad.html
+   trunk/Manual/Bitmap/UnloadFromGPU.html
+   trunk/Manual/Bitmap/UnloadToMemory.html
+   trunk/Manual/Bitmap/UseAutoDelete.html
+   trunk/Manual/Bitmap/Width.html
+   trunk/Manual/Blenders.html
+   trunk/Manual/Blenders/Set.html
+   trunk/Manual/Canvas.html
+   trunk/Manual/Canvas/DisableClipping.html
+   trunk/Manual/Canvas/Fill.html
+   trunk/Manual/Canvas/GetClippingRegion.html
+   trunk/Manual/Canvas/GetMemoryBitmap.html
+   trunk/Manual/Canvas/Height.html
+   trunk/Manual/Canvas/Refresh.html
+   trunk/Manual/Canvas/Save.html
+   trunk/Manual/Canvas/SetClipping.html
+   trunk/Manual/Canvas/SetPixelWriteMode.html
+   trunk/Manual/Canvas/SetTo.html
+   trunk/Manual/Canvas/Width.html
+   trunk/Manual/Circle/SetRadius.html
+   trunk/Manual/Collision.html
+   trunk/Manual/Collision/GetPoint.html
+   trunk/Manual/Collision/GetSegment.html
+   trunk/Manual/Collision/IsCollision.html
+   trunk/Manual/Ellipse/Circle.html
+   trunk/Manual/Ellipse/Draw.html
+   trunk/Manual/Ellipse/SetRadius.html
+   trunk/Manual/Line/Collides.html
+   trunk/Manual/Line/Draw.html
+   trunk/Manual/LineStrip/Draw.html
+   trunk/Manual/Placement/MoveBy.html
+   trunk/Manual/Point/Draw.html
+   trunk/Manual/Poly/Collides.html
+   trunk/Manual/Poly/Draw.html
+   trunk/Manual/Rect/Draw.html
+   trunk/Manual/Rgba/Select.html
+   trunk/Manual/Settings/StoreMemoryBitmaps.html
+   trunk/Manual/Setup/GetWindowHeight.html
+   trunk/Manual/Setup/GetWindowWidth.html
+   trunk/Manual/Shape/Draw.html
+   trunk/Manual/Shape/DrawOutline.html
+   trunk/Manual/Shape/Ellipse.html
+   trunk/Manual/Shape/Line.html
+   trunk/Manual/Shape/MoveBy.html
+   trunk/Manual/Shape/Point.html
+   trunk/Manual/Shape/RecordDraw.html
+   trunk/Manual/Shape/Rect.html
+   trunk/Manual/TextRenderer.html
+   trunk/Manual/TextRenderer/Height.html
+   trunk/Manual/TextRenderer/IsValid.html
+   trunk/Manual/TextRenderer/Load.html
+   trunk/Manual/TextRenderer/SendToGPU.html
+   trunk/Manual/TextRenderer/Width.html
+Log:
+Updated the manual
+
+
+
+From bradeeoh at berlios.de  Fri Feb 24 04:31:44 2006
+From: bradeeoh at berlios.de (bradeeoh at berlios.de)
+Date: Fri, 24 Feb 2006 04:31:44 +0100
+Subject: [Openlayer-svn] r9 - trunk/src
+Message-ID: <200602240331.k1O3Vitw032519@sheep.berlios.de>
+
+Author: bradeeoh
+Date: 2006-02-24 04:31:28 +0100 (Fri, 24 Feb 2006)
+New Revision: 9
+
+Modified:
+   trunk/src/TextRenderer.cpp
+   trunk/src/TextureInfo.cpp
+Log:
+Fixed some initialization order issues to wipe out compiler warnings
+
+
+
+From bradeeoh at berlios.de  Fri Feb 24 04:32:37 2006
+From: bradeeoh at berlios.de (bradeeoh at berlios.de)
+Date: Fri, 24 Feb 2006 04:32:37 +0100
+Subject: [Openlayer-svn] r10 - trunk/src
+Message-ID: <200602240332.k1O3Wb7n032707@sheep.berlios.de>
+
+Author: bradeeoh
+Date: 2006-02-24 04:32:33 +0100 (Fri, 24 Feb 2006)
+New Revision: 10
+
+Modified:
+   trunk/src/GlDriver.cpp
+Log:
+Fixed SaveMemoryBitmap() return value
+
+
+
+From bradeeoh at berlios.de  Fri Feb 24 19:03:38 2006
+From: bradeeoh at berlios.de (bradeeoh at berlios.de)
+Date: Fri, 24 Feb 2006 19:03:38 +0100
+Subject: [Openlayer-svn] r11 - trunk/demos/collisiondemo
+Message-ID: <200602241803.k1OI3cpg015167@sheep.berlios.de>
+
+Author: bradeeoh
+Date: 2006-02-24 19:03:17 +0100 (Fri, 24 Feb 2006)
+New Revision: 11
+
+Modified:
+   trunk/demos/collisiondemo/main.cpp
+Log:
+Collision demo is "interesting" now - still needs alot of work
+
+
+
+From bradeeoh at berlios.de  Sun Feb 26 20:19:40 2006
+From: bradeeoh at berlios.de (bradeeoh at berlios.de)
+Date: Sun, 26 Feb 2006 20:19:40 +0100
+Subject: [Openlayer-svn] r12 - trunk/include/OpenLayer
+Message-ID: <200602261919.k1QJJePL027561@sheep.berlios.de>
+
+Author: bradeeoh
+Date: 2006-02-26 20:19:23 +0100 (Sun, 26 Feb 2006)
+New Revision: 12
+
+Modified:
+   trunk/include/OpenLayer/Line.hpp
+Log:
+Fixed (BAD) typo in a constructor
+
+
+
+From bradeeoh at berlios.de  Mon Feb 27 00:33:33 2006
+From: bradeeoh at berlios.de (bradeeoh at berlios.de)
+Date: Mon, 27 Feb 2006 00:33:33 +0100
+Subject: [Openlayer-svn] r13 - in trunk: include/OpenLayer src
+Message-ID: <200602262333.k1QNXXvD023320@sheep.berlios.de>
+
+Author: bradeeoh
+Date: 2006-02-27 00:33:19 +0100 (Mon, 27 Feb 2006)
+New Revision: 13
+
+Modified:
+   trunk/include/OpenLayer/Framebuffer.hpp
+   trunk/src/Framebuffer.cpp
+Log:
+Hopefully fixed the X header DestroyAll conflict with a few #ifdef wrappers
+
+
+
+From bradeeoh at berlios.de  Tue Feb 28 16:25:45 2006
+From: bradeeoh at berlios.de (bradeeoh at berlios.de)
+Date: Tue, 28 Feb 2006 16:25:45 +0100
+Subject: [Openlayer-svn] r14 - in trunk: include/OpenLayer src
+Message-ID: <200602281525.k1SFPjpu016998@sheep.berlios.de>
+
+Author: bradeeoh
+Date: 2006-02-28 16:25:30 +0100 (Tue, 28 Feb 2006)
+New Revision: 14
+
+Modified:
+   trunk/include/OpenLayer/Framebuffer.hpp
+   trunk/include/OpenLayer/GlDriver.hpp
+   trunk/include/OpenLayer/Line.hpp
+   trunk/include/OpenLayer/PendingLoad.hpp
+   trunk/include/OpenLayer/Rectangle.hpp
+   trunk/include/OpenLayer/RenderModes.hpp
+   trunk/include/OpenLayer/Shape.hpp
+   trunk/src/Framebuffer.cpp
+Log:
+Added virtual d'tors to classes missing them
+
+
+
+From bradeeoh at berlios.de  Tue Feb 28 17:03:28 2006
+From: bradeeoh at berlios.de (bradeeoh at berlios.de)
+Date: Tue, 28 Feb 2006 17:03:28 +0100
+Subject: [Openlayer-svn] r15 - in trunk: include/OpenLayer src
+Message-ID: <200602281603.k1SG3SYr020191@sheep.berlios.de>
+
+Author: bradeeoh
+Date: 2006-02-28 17:03:23 +0100 (Tue, 28 Feb 2006)
+New Revision: 15
+
+Modified:
+   trunk/include/OpenLayer/Framebuffer.hpp
+   trunk/src/Framebuffer.cpp
+Log:
+DestroyAll #undefed - noone blame me if this breaks something in the future please   ;)
+
+
+
